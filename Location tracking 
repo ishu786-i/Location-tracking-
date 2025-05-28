@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Share - Home</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Location Share</h1>
+        
+        <!-- Login Form -->
+        <div class="form-container">
+            <h2>Login</h2>
+            <form action="process_login.php" method="POST">
+                <div class="form-group">
+                    <label for="login-username">Username:</label>
+                    <input type="text" id="login-username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password:</label>
+                    <input type="password" id="login-password" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <!-- Registration Form -->
+        <div class="form-container">
+            <h2>Register</h2>
+            <form action="process_register.php" method="POST">
+                <div class="form-group">
+                    <label for="reg-username">Username:</label>
+                    <input type="text" id="reg-username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-email">Email:</label>
+                    <input type="email" id="reg-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-password">Password:</label>
+                    <input type="password" id="reg-password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" name="confirm_password" required>
+                </div>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+    <script src="assets/script.js"></script>
+
+
+
+
+<style>
+/* Overlay */
+#ad-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Popup */
+#ad-popup {
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px 20px 20px 20px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Close Button (Minimal Red Cross) */
+#ad-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: red;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+}
+#ad-close:hover {
+  color: darkred;
+}
+
+/* WhatsApp Buttons */
+.ad-btn {
+  display: block;
+  margin: 15px auto;
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: 2px solid #25D366;
+  background-color: #25D366;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+  animation: pulse 1.5s infinite;
+}
+.ad-btn:hover {
+  background-color: #1ebf57;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+</style>
+
+<div id="ad-overlay">
+  <div id="ad-popup">
+    <button id="ad-close">&times;</button>
+    <h2>This tool is made by @devil_x_ishu</h2>
+    <a class="ad-btn" href="https://whatsapp.com/channel/0029VaxYg161dAw0FDASaC3U" target="_blank">Join Developer Channel</a>
+    <a class="ad-btn" href="https://whatsapp.com/channel/0029VatUln3KwqSSVSPTbD0p" target="_blank"></a>
+    <a class="ad-btn" href="https://whatsapp.com/channel/0029Va9Ufzi8kyyEnEHvOm1h" target="_blank"></a>
+  </div>
+</div>
+
+<script>
+// Close popup
+document.getElementById("ad-close").onclick = function() {
+  document.getElementById("ad-overlay").style.display = "none";
+};
+</script>
+
+
+
+
+</body>
+</html>
